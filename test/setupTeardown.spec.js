@@ -20,7 +20,16 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('quem sobreviveu?', () => {
-  // Adicione seu código aqui
+  beforeEach(() => { adventure.randomAttack(); });
+
+  afterEach(() => {
+    const restantes = adventure.specialists.reduce((acc, tryber) => `${acc} ${tryber.nome},`, '').replace(/,$/, '.');
+    if (adventure.specialists.length > 1) {
+      console.log(`Aventureiros restantes:${restantes}`);
+    } else {
+      console.log(`O último sobrevivente foi o${restantes.replace(/\./, '!')}`);
+    }
+  });
 
   test('depois da primeira aventura', () => {
     expect(adventure.specialists.length).toBe(5);
