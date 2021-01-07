@@ -21,6 +21,20 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 
 describe('quem sobreviveu?', () => {
   // Adicione seu código aqui
+  let aventura = 1;
+  beforeEach(() => {
+    adventure.randomAttack();
+    const sobrev = adventure.specialists.map(sobrevivente => sobrevivente.nome);
+
+    aventura === 5 ?
+      console.log(`Parabéns ${sobrev}, você é o grande herói que superou
+      todos os desafios `) :
+      console.log(`Sobreviventes depois da ${aventura}: ${sobrev} `);
+  });
+
+  afterEach(() => {
+    aventura += 1;
+  });
 
   test('depois da primeira aventura', () => {
     expect(adventure.specialists.length).toBe(5);
