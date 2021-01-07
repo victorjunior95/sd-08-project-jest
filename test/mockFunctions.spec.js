@@ -25,7 +25,7 @@ describe('verifica as funções e os mocks', () => {
   let spyMultiply = jest.spyOn(mockFunctions, 'multiply')
     .mockImplementation((num1, num2) => num1 * num2);
 
-  let spyDivide= jest.spyOn(mockFunctions, 'divide')
+  let spyDivide = jest.spyOn(mockFunctions, 'divide')
     .mockImplementation((num1, num2) => num1 / num2);
 
   let spyPower = jest.spyOn(mockFunctions, 'power')
@@ -33,15 +33,15 @@ describe('verifica as funções e os mocks', () => {
 
   let spyFactorial = jest.spyOn(mockFunctions, 'factorial')
     .mockImplementation(factorial = (num1) => {
-      
+
       if ((num1 === 0) || (num1 === 1)) {
         return 1;
-        }
-        else {
+      }
+      else {
         return (num1 * factorial(num1 - 1));
-        }
-        });
-   
+      }
+    });
+
 
   test('testa função add', () => {
     expect(mockFunctions.add(1, 2)).toEqual(3);
