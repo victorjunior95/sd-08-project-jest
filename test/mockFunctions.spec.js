@@ -14,49 +14,157 @@ O foco aqui é a utilização de mock functions.
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
+jest.mock('../src/mockFunctions');
+
 describe('verifica as funções e os mocks', () => {
   // Crie suas mock functions aqui
-  
+  mockFunctions.add.mockImplementation((a,b) => a + b);
+
+  mockFunctions.subtract.mockImplementation((a,b) => a - b);
+
+  mockFunctions.multiply.mockImplementation((a,b) => a * b);
+
+  mockFunctions.divide.mockImplementation((a,b) => a / b);
+
+  mockFunctions.power.mockImplementation((a, b) => a ** b);
+
+  mockFunctions.factorial.mockImplementation(a => {
+    let fact = 1;
+    for (let index = 1; index <= a; index += 1) {
+      fact *= index;
+    }
+    return fact;
+  });
+
   test('testa função add', () => {
     expect(mockFunctions.add(1, 2)).toEqual(3);
+    expect(mockFunctions.add).toHaveBeenCalledTimes(1);
+    expect(mockFunctions.add).toHaveBeenCalledWith(1, 2);
+
     expect(mockFunctions.add(8, 37)).toEqual(45);
+    expect(mockFunctions.add).toHaveBeenCalledTimes(2);
+    expect(mockFunctions.add).toHaveBeenCalledWith(8, 37);
+
     expect(mockFunctions.add(-11, 25)).toEqual(14);
+    expect(mockFunctions.add).toHaveBeenCalledTimes(3);
+    expect(mockFunctions.add).toHaveBeenCalledWith(-11, 25);
+
     expect(mockFunctions.add(13, -188)).toEqual(-175);
+    expect(mockFunctions.add).toHaveBeenCalledTimes(4);
+    expect(mockFunctions.add).toHaveBeenCalledWith(13, -188);
+
     expect(mockFunctions.add(7, 26)).toEqual(33);
+    expect(mockFunctions.add).toHaveBeenCalledTimes(5);
+    expect(mockFunctions.add).toHaveBeenCalledWith(7, 26);
   });
+
   test('testa função subtract', () => {
     expect(mockFunctions.subtract(899, 35)).toEqual(864);
+    expect(mockFunctions.subtract).toHaveBeenCalledTimes(1);
+    expect(mockFunctions.subtract).toHaveBeenCalledWith(899, 35);
+
     expect(mockFunctions.subtract(-17, 333)).toEqual(-350);
+    expect(mockFunctions.subtract).toHaveBeenCalledTimes(2);
+    expect(mockFunctions.subtract).toHaveBeenCalledWith(-17, 333);
+
     expect(mockFunctions.subtract(45, 97)).toEqual(-52);
+    expect(mockFunctions.subtract).toHaveBeenCalledTimes(3);
+    expect(mockFunctions.subtract).toHaveBeenCalledWith(45, 97);
+
     expect(mockFunctions.subtract(23, -108)).toEqual(131);
+    expect(mockFunctions.subtract).toHaveBeenCalledTimes(4);
+    expect(mockFunctions.subtract).toHaveBeenCalledWith(23, -108);
+
     expect(mockFunctions.subtract(-133, -29)).toEqual(-104);
+    expect(mockFunctions.subtract).toHaveBeenCalledTimes(5);
+    expect(mockFunctions.subtract).toHaveBeenCalledWith(-133, -29);
   });
+
   test('testa função multiply', () => {
     expect(mockFunctions.multiply(1, 2)).toEqual(2);
+    expect(mockFunctions.multiply).toHaveBeenCalledTimes(1);
+    expect(mockFunctions.multiply).toHaveBeenCalledWith(1, 2);
+
     expect(mockFunctions.multiply(0, 5)).toEqual(0);
+    expect(mockFunctions.multiply).toHaveBeenCalledTimes(2);
+    expect(mockFunctions.multiply).toHaveBeenCalledWith(0, 5);
+
     expect(mockFunctions.multiply(-4, 9)).toEqual(-36);
+    expect(mockFunctions.multiply).toHaveBeenCalledTimes(3);
+    expect(mockFunctions.multiply).toHaveBeenCalledWith(-4, 9);
+
     expect(mockFunctions.multiply(-12, -7)).toEqual(84);
+    expect(mockFunctions.multiply).toHaveBeenCalledTimes(4);
+    expect(mockFunctions.multiply).toHaveBeenCalledWith(-12, -7);
+
     expect(mockFunctions.multiply(19, 23)).toEqual(437);
+    expect(mockFunctions.multiply).toHaveBeenCalledTimes(5);
+    expect(mockFunctions.multiply).toHaveBeenCalledWith(19, 23);
   });
+
   test('testa função divide', () => {
     expect(mockFunctions.divide(169, 13)).toEqual(13);
+    expect(mockFunctions.divide).toHaveBeenCalledTimes(1);
+    expect(mockFunctions.divide).toHaveBeenCalledWith(169, 13);
+
     expect(mockFunctions.divide(-1900, 5)).toEqual(-380);
+    expect(mockFunctions.divide).toHaveBeenCalledTimes(2);
+    expect(mockFunctions.divide).toHaveBeenCalledWith(-1900, 5);
+
     expect(mockFunctions.divide(42, 7)).toEqual(6);
+    expect(mockFunctions.divide).toHaveBeenCalledTimes(3);
+    expect(mockFunctions.divide).toHaveBeenCalledWith(42, 7);
+
     expect(mockFunctions.divide(729, 243)).toEqual(3);
+    expect(mockFunctions.divide).toHaveBeenCalledTimes(4);
+    expect(mockFunctions.divide).toHaveBeenCalledWith(729, 243);
+
     expect(mockFunctions.divide(1331, 11)).toEqual(121);
+    expect(mockFunctions.divide).toHaveBeenCalledTimes(5);
+    expect(mockFunctions.divide).toHaveBeenCalledWith(1331, 11);
   });
+
   test('testa função power', () => {
     expect(mockFunctions.power(10, 2)).toEqual(100);
+    expect(mockFunctions.power).toHaveBeenCalledTimes(1);
+    expect(mockFunctions.power).toHaveBeenCalledWith(10, 2);
+
     expect(mockFunctions.power(2, 10)).toEqual(1024);
+    expect(mockFunctions.power).toHaveBeenCalledTimes(2);
+    expect(mockFunctions.power).toHaveBeenCalledWith(2, 10);
+
     expect(mockFunctions.power(5, 5)).toEqual(3125);
+    expect(mockFunctions.power).toHaveBeenCalledTimes(3);
+    expect(mockFunctions.power).toHaveBeenCalledWith(5, 5);
+
     expect(mockFunctions.power(1, 10)).toEqual(1);
+    expect(mockFunctions.power).toHaveBeenCalledTimes(4);
+    expect(mockFunctions.power).toHaveBeenCalledWith(1, 10);
+
     expect(mockFunctions.power(0, 0)).toEqual(1);
+    expect(mockFunctions.power).toHaveBeenCalledTimes(5);
+    expect(mockFunctions.power).toHaveBeenCalledWith(0, 0);
   });
+
   test('testa função factorial', () => {
     expect(mockFunctions.factorial(5)).toEqual(120);
+    expect(mockFunctions.factorial).toHaveBeenCalledTimes(1);
+    expect(mockFunctions.factorial).toHaveBeenCalledWith(5);
+
     expect(mockFunctions.factorial(10)).toEqual(3628800);
+    expect(mockFunctions.factorial).toHaveBeenCalledTimes(2);
+    expect(mockFunctions.factorial).toHaveBeenCalledWith(10);
+
     expect(mockFunctions.factorial(3)).toEqual(6);
+    expect(mockFunctions.factorial).toHaveBeenCalledTimes(3);
+    expect(mockFunctions.factorial).toHaveBeenCalledWith(3);
+
     expect(mockFunctions.factorial(8)).toEqual(40320);
+    expect(mockFunctions.factorial).toHaveBeenCalledTimes(4);
+    expect(mockFunctions.factorial).toHaveBeenCalledWith(8);
+
     expect(mockFunctions.factorial(2)).toEqual(2);
+    expect(mockFunctions.factorial).toHaveBeenCalledTimes(5);
+    expect(mockFunctions.factorial).toHaveBeenCalledWith(2);
   });
 });
