@@ -16,3 +16,25 @@ const fetchURL = () => new Promise(function (resolve, reject) {
 });
 
 module.exports = { fetchURL };
+
+const test = new Promise(function (resolve, reject) {
+  resolve({
+    user: {
+      gender: 'Masculino',
+      name: {
+        first: 'Antônio',
+        last: 'Britto',
+      },
+      location: {
+        country: 'Brasil'
+      },
+      email: 'tunico@bol.com.br',
+      login: {
+        username: 'tunicao123',
+        Senha: 1234567890,
+      },
+    }
+  });
+});
+
+test.then((data) => console.log(data.user))
