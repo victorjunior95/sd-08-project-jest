@@ -1,0 +1,20 @@
+// ATENÇÃO!!! Não edite este arquivo. Altere apenas os arquivos da pasta 'test'.
+const answerPhone = answer => new Promise(function (resolve, reject) {
+  setTimeout(answer ? resolve('Oi!') : reject('Infelizmente não podemos atender...'), 3000);
+});
+
+module.exports = answerPhone;
+
+
+const test = (num) => {
+  if(num === 0) return 1;
+  let total = 0;
+  while(num > 0){
+    total * num;
+    num - 1;
+    console.log(num);
+  }
+  return total;
+};
+
+console.log(test(5));
