@@ -16,7 +16,33 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 
 describe('verifica as funções e os mocks', () => {
   // Crie suas mock functions aqui
-  
+  let spyAdd = jest.spyOn(mockFunctions, 'add')
+    .mockImplementation((num1, num2) => num1 + num2);
+
+  let spySubtract = jest.spyOn(mockFunctions, 'subtract')
+    .mockImplementation((num1, num2) => num1 - num2);
+
+  let spyMultiply = jest.spyOn(mockFunctions, 'multiply')
+    .mockImplementation((num1, num2) => num1 * num2);
+
+  let spyDivide= jest.spyOn(mockFunctions, 'divide')
+    .mockImplementation((num1, num2) => num1 / num2);
+
+  let spyPower = jest.spyOn(mockFunctions, 'power')
+    .mockImplementation((num1, num2) => Math.pow(num1, num2));
+
+  let spyFactorial = jest.spyOn(mockFunctions, 'factorial')
+    .mockImplementation(factorial = (num1) => {
+      
+      if ((num1 === 0) || (num1 === 1)) {
+        return 1;
+        }
+        else {
+        return (num1 * factorial(num1 - 1));
+        }
+        });
+   
+
   test('testa função add', () => {
     expect(mockFunctions.add(1, 2)).toEqual(3);
     expect(mockFunctions.add(8, 37)).toEqual(45);
