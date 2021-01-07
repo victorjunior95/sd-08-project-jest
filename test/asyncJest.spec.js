@@ -14,7 +14,7 @@ describe("o retorno do telefonema", () => {
   test("atende", () => {
     assert.fail();
     function teste({
-      
+      somar
     })
   });
   test("ocupado", () => {
