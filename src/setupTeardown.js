@@ -10,32 +10,38 @@ const phrase = [
   'Como assim critico?',
   'O plano é perfeito! Nada pode dar errado!',
   'Ei não rasgue minha FICHA!',
-  'Quem são vocês criaturas insignificantes?'
+  'Quem são vocês criaturas insignificantes?',
 ];
 
 const specialists = [{
-  nome: 'Tunico', classe: 'Mestre dos Magos',
+  nome: 'Tunico',
+  classe: 'Mestre dos Magos',
   message: 'Às vezes olhando para trás vocês podem ver mais claramente o caminho que está adiante.',
 },
 {
-  nome: 'Cremoso', classe: 'Cavaleiro Negro',
-  message: 'Faça seus medos terem medo de você.'
+  nome: 'Cremoso',
+  classe: 'Cavaleiro Negro',
+  message: 'Faça seus medos terem medo de você.',
 },
 {
-  nome: 'Gordinho', classe: 'Pirata',
-  message: 'Precisa se perder para achar lugares que não se acham, se não todos saberiam onde fica.'
+  nome: 'Gordinho',
+  classe: 'Pirata',
+  message: 'Precisa se perder para achar lugares que não se acham, se não todos saberiam onde fica.',
 },
 {
-  nome: 'Lobo Solitário', classe: 'Samurai',
+  nome: 'Lobo Solitário',
+  classe: 'Samurai',
   message: 'Eles se perderam novamente, Bando de idiotas!',
 },
 {
-  nome: 'Ousado', classe: 'Mago',
-  message: 'Pode se encontrar a felicidade mesmo nas horas mais sombrias, se a pessoa se lembrar de acender a luz.'
+  nome: 'Ousado',
+  classe: 'Mago',
+  message: 'Pode se encontrar a felicidade mesmo nas horas mais sombrias, se a pessoa se lembrar de acender a luz.',
 },
 {
-  nome: 'Anjo Loiro', classe: 'Clérigo',
-  message: 'Para enganar teu inimigo, pareça fraco quando for fote e pareça forte quando for fraco.'
+  nome: 'Anjo Loiro',
+  classe: 'Clérigo',
+  message: 'Para enganar teu inimigo, pareça fraco quando for fote e pareça forte quando for fraco.',
 }];
 
 const enemies = [{ nome: 'Barata', ataque: 'Voado' },
