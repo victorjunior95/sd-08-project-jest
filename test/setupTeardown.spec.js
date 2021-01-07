@@ -41,5 +41,6 @@ describe('quem sobreviveu?', () => {
   test('depois da quinta aventura', () => {
     adventure.randomAttack();
     expect(adventure.specialists.length).toBe(1);
+    console.log(`O sobrevivente foi:${adventure.specialists[0].nome}`);
   });
 });
