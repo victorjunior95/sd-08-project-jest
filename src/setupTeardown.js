@@ -7,7 +7,7 @@ const phrase = [
   'Não precisa, eu consigo segurar os inimigos.',
   'Cadê o sup?',
   'Relaxa, não tem nenhuma armadilha nesse corredor, eu mesmo conferi',
-  'Como assim critico?',
+  'Como assim crítico?',
   'O plano é perfeito! Nada pode dar errado!',
   'Ei não rasgue minha FICHA!',
   'Quem são vocês criaturas insignificantes?',
@@ -41,7 +41,7 @@ const specialists = [{
 {
   nome: 'Anjo Loiro',
   classe: 'Clérigo',
-  message: 'Para enganar teu inimigo, pareça fraco quando for fote e pareça forte quando for fraco.',
+  message: 'Para enganar teu inimigo, pareça fraco quando for forte e pareça forte quando for fraco.',
 }];
 
 const enemies = [{ nome: 'Barata', ataque: 'Voado' },

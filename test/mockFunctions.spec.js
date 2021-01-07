@@ -63,15 +63,7 @@ describe('verifica as funções e os mocks', () => {
     expect(mockFunctions.power(0, 0)).toEqual(1);
   });
 
-  mockFunctions.factorial.mockImplementation((num) => {
-    if (num === 0) return 1;
-    let total = 1;
-    while (num > 1) {
-      total = total * num;
-      num = num - 1;
-    }
-    return total;
-  });
+  mockFunctions.factorial = jest.fn(num => num > 1 ? num * mockFunctions.factorial(num - 1) : num)
   test('testa função factorial', () => {
     expect(mockFunctions.factorial(5)).toEqual(120);
     expect(mockFunctions.factorial(10)).toEqual(3628800);
