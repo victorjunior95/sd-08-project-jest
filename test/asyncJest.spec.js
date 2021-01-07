@@ -19,7 +19,7 @@ describe("o retorno do telefonema", () => {
   });
   test("ocupado", () => {
     // Insira seu teste assíncrono aqui
-    return answerPhone(true).catch(string => {
+    return answerPhone(false).catch(string => {
       expect(string).toBe('Infelizmente não podemos atender...');
     });
   });
