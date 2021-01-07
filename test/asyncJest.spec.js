@@ -14,15 +14,16 @@ async function testing(bool, status, result) {
   expect.assertions(1);
   if (status === 'resolves') {
     await expect(answerPhone(bool)).resolves.toBe(result);
+  } else {
+    await expect(answerPhone(bool)).rejects.toBe(result);
   }
-  await expect(answerPhone(bool)).rejects.toBe(result);
 }
 
 describe('o retorno do telefonema', () => {
   test('atende', async () => {
-    testing(true, 'resolves', 'Oi!');
+    await testing(true, 'resolves', 'Oi!');
   });
   test('ocupado', async () => {
-    testing(false, 'rejects', 'Infelizmente não podemos atender...');
+    await testing(false, 'rejects', 'Infelizmente não podemos atender...');
   });
 });
