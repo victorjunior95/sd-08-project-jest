@@ -34,6 +34,8 @@ exclude_patterns:
 - "node_modules/"
 - "test/"
 - "src/data.js"
+- "package-lock.json"
+- "package.json"
 plugins:
   editorconfig:
     enabled: true
