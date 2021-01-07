@@ -35,6 +35,7 @@ exclude_patterns:
 - "test/"
 - "src/data.js"
 - "README.md"
+- "*.json"
 plugins:
   editorconfig:
     enabled: true
