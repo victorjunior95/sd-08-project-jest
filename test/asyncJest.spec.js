@@ -12,11 +12,14 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 
 describe("o retorno do telefonema", () => {
   test("atende", () => {
-    assert.fail();
-    // Insira seu teste assíncrono aqui
+    const mock = jest.fn().mockResolvedValue('Oi!');
+    expect(mock()).resolves.toBe('Oi!');
+    expect(mock).toBeCalledTimes(1);
   });
+
   test("ocupado", () => {
-    assert.fail();
-    // Insira seu teste assíncrono aqui
+    const mock = jest.fn().mockRejectedValue('Infelizmente não podemos atender...');
+    expect(mock()).rejects.toBe('Infelizmente não podemos atender...');
+    expect(mock).toBeCalledTimes(1);
   });
 });
