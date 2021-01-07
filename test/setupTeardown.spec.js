@@ -28,7 +28,7 @@ describe('quem sobreviveu?', () => {
   });
 
   afterEach(() => {
-    console.log(`Grupo restante: ${adventure.specialists}`);
+    console.log(adventure.specialists);
   });
 
   afterAll(() => {
