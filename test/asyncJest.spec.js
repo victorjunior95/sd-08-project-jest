@@ -15,12 +15,12 @@ describe("o retorno do telefonema", () => {
     expect.assertions(1);
     return answerPhone(true).then(answer => {
       expect(answer).toBe('Oi!');
-    })
+    });
   });
   test("ocupado", () => {
     expect.assertions(1);
     return answerPhone(false).catch((answer) => {
       expect(answer).toBe('Infelizmente não podemos atender...');
-    })
+    });
   });
 });
