@@ -13,12 +13,15 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 //iniciando...07/01/2020 14:34
 
 describe("o retorno do telefonema", () => {
-  test("atende", () => {
-    assert.fail();
+  test("atende", async () => {
+    expect.assertions(1);
+    await expect(answerPhone(true)).resolves.toEqual('Oi!')
     // Insira seu teste assíncrono aqui
   });
-  test("ocupado", () => {
-    assert.fail();
+  test("ocupado", async () => {
+    expect.assertions(1);
+    await expect(answerPhone(false)).rejects.toEqual('Infelizmente não podemos atender...')
     // Insira seu teste assíncrono aqui
   });
 });
+
