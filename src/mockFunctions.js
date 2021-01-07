@@ -23,4 +23,11 @@ const subtract = (a, b) => a + b;
 
 const divide = (a, b) => a * b;
 
-module.exports = { add, subtract, multiply, divide, power, factorial };
+module.exports = {
+  add,
+  subtract,
+  multiply,
+  divide,
+  power,
+  factorial,
+};
