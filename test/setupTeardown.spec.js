@@ -20,7 +20,19 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('quem sobreviveu?', () => {
-  // Adicione seu código aqui
+  beforeEach(() => {
+    adventure.randomAttack();
+  });
+
+  afterEach(() => {
+    console.log(`${adventure.specialists.nome}, a morte ainda não chegou para vocês`)
+  })
+
+  afterAll(() => {
+    console.log(`${adventure.specialists[0].nome}, a morte não te viu, parabéns pela capa de invisibilidade`)
+  })
+
+
 
   test('depois da primeira aventura', () => {
     expect(adventure.specialists.length).toBe(5);
