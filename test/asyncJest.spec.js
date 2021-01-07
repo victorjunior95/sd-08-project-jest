@@ -11,12 +11,19 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe("o retorno do telefonema", () => {
-  test("atende", () => {
-    
-    // Insira seu teste assíncrono aqui
+  const phone = jest.fn();
+  test("atende", async () => {
+    phone.mockResolvedValue('Oi!');
+
+  
+    expect(phone()).resolves.toBe('Oi!');
+    expect(phone).toHaveBeenCalledTimes(1);
+
   });
-  test("ocupado", () => {
-    assert.fail();
-    // Insira seu teste assíncrono aqui
+  test("ocupado", async () => {
+    phone.mockRejectedValue('Infelizmente não podemos atender...');
+    
+    expect(phone()).rejects.toMatch('Infelizmente não podemos atender...');
+    expect(phone).toHaveBeenCalledTimes(2);
   });
 });
