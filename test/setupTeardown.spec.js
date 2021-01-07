@@ -27,6 +27,10 @@ describe('quem sobreviveu?', () => {
     mockRandomAttack();
   });
 
+  afterEach(() => {
+    console.log(`Grupo restante: ${adventure.specialists}`);
+  });
+
   afterAll(() => {
     console.log(adventure.specialists[0].nome);
   });
