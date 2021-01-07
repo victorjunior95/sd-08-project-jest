@@ -10,6 +10,8 @@ a função recebe como parâmetro true e false, respectivamente.
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
+//iniciando...07/01/2020 14:34
+
 describe("o retorno do telefonema", () => {
   test("atende", () => {
     assert.fail();
