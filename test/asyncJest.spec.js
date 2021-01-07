@@ -11,14 +11,14 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe("o retorno do telefonema", () => {
-  test("atende", () => {
+  test("atende", async () => {
     expect.assertions(1);
     await answerPhone(true).then(data => {
       console.log(data);
       expect(data).toBe('Oi!');
     });
   });
-  test("ocupado", () => {
+  test("ocupado", async () => {
     expect.assertions(1);
     await answerPhone(false).catch(data => {
       console.log(data);
