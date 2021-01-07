@@ -2,4 +2,12 @@
 
 # VSCode repo settings
 .vscode
+package-lock.json
+.stylelintrc.json
+.eslintrc
+.codeclimate.yml
+.editorconfig
+README.md
+.trybe
+.github
 node_modules/
