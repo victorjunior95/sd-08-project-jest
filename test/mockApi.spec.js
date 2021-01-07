@@ -1,4 +1,5 @@
 const api = require('../src/mockApi');
+
 const apiResult = {
   gender: 'male',
   name: { title: 'Mr', first: 'Antônio', last: 'Britto' },
