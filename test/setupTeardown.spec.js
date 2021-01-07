@@ -24,6 +24,10 @@ describe('quem sobreviveu?', () => {
     adventure.randomAttack();
   });
 
+  afterAll(() => {
+    console.log(`Parabéns ${adventure.specialists[0].nome}! Você foi o único sobrevivente!`);
+  });
+
   test('depois da primeira aventura', () => {
     expect(adventure.specialists.length).toBe(5);
   });
@@ -38,7 +42,5 @@ describe('quem sobreviveu?', () => {
   });
   test('depois da quinta aventura', () => {
     expect(adventure.specialists.length).toBe(1);
-
-    console.log(`Parabéns ${adventure.specialists[0].nome}! Você foi o único sobrevivente!`);
   });
 });
