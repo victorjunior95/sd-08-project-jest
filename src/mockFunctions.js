@@ -9,7 +9,7 @@ const power = (a, b) => {
   return pow;
 };
 
-const factorial = (a) => {
+const factorial = a => {
   let fact = 0;
   for (let i = 0; i < a; i += 1) {
     fact += a;
