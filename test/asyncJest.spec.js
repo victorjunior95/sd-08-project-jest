@@ -1,4 +1,4 @@
-const answerPhone = require("../src/asyncJest");
+let answerPhone = require("../src/asyncJest");
 
 /*
 A função answerPhone recebe um parâmetro boleano.
@@ -11,12 +11,22 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe("o retorno do telefonema", () => {
-  test("atende", () => {
-    assert.fail();
-    // Insira seu teste assíncrono aqui
+  test("atende", async () => {
+    answerPhone = jest.fn().mockResolvedValue('Oi!');
+    
+    await answerPhone();
+    expect(answerPhone).toHaveBeenCalled();
+    expect(answerPhone).toHaveBeenCalledTimes(1);
+    expect(answerPhone).toHaveBeenCalledWith();
+    expect(answerPhone()).resolves.toBe('Oi!');
+    expect(answerPhone).toHaveBeenCalledTimes(2);
   });
-  test("ocupado", () => {
-    assert.fail();
-    // Insira seu teste assíncrono aqui
+  test("ocupado", async () => {
+    answerPhone = jest.fn().mockRejectedValue('Infelizmente não podemos atender...');
+
+    expect(answerPhone).toHaveBeenCalledTimes(0);
+    expect(answerPhone()).rejects.toMatch('Infelizmente não podemos atender...');
+    expect(answerPhone).toHaveBeenCalledWith();
+    expect(answerPhone).toHaveBeenCalledTimes(1);
   });
 });
