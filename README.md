@@ -11,6 +11,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 ---
 
 # Sumário
+
 - [Boas vindas ao repositório do projeto de Jest Assíncrono e Mocking!](#boas-vindas-ao-repositório-do-projeto-de-jest-assíncrono-e-mocking)
 - [Sumário](#sumário)
 - [Habilidades](#habilidades)
@@ -27,11 +28,11 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [Code Climate](#code-climate)
 - [Requisitos do projeto](#requisitos-do-projeto)
   - [Lista de requisitos](#lista-de-requisitos)
-    - [1 - Crie testes para uma função assíncrona](#1-crie-testes-para-uma-função-assíncrona)
-    - [2 - Crie um "Mock" no arquivo test/mockFunctions.spec.js](#2-Crie-um-"Mock"-no-arquivo-test/mockFunctions.spec.js)
-    - [3 - Crie um Mock para o retorno da API](#3-Crie-um-Mock-para-o-retorno-da-API)
-    - [4 - Crie funções no arquivo test/setupTeardown.spec.js](#4-Crie-funções-no-arquivo-test/setupTeardown.spec.js)
-- [Avisos finais](#avisos-finais)
+    - [1. Crie testes para uma função assíncrona](#1-crie-testes-para-uma-função-assíncrona)
+    - [2. Crie um "Mock" no arquivo test/mockFunctions.spec.js](#2-crie-um-mock-no-arquivo-testmockfunctionsspecjs)
+    - [3. Crie um Mock para o retorno da API](#3-crie-um-mock-para-o-retorno-da-api)
+    - [4. Crie funções no arquivo test/setupTeardown.spec.js](#4-crie-funções-no-arquivo-testsetupteardownspecjs)
+- [Avisos Finais](#avisos-finais)
 
 ---
 
@@ -60,14 +61,13 @@ Este repositório contém a estrutura de pastas e arquivos que contém funções
 
 Para testar se os requisitos estão passando, você pode executar os testes na sua máquina com o comando `npm test nome-arquivo.test`. É muito importante que você **não modifique nenhum arquivo da pasta src**. Alterá-los pode fazer com que o seu requisito não passe no avaliador automático.
 
-
 ## Data de entrega
 
-  - Projeto individual.
+- Projeto individual.
 
-  - Serão dois dias de projeto.
+- Serão dois dias de projeto.
 
-  - Data de entrega para avaliação final do projeto: `DD/MM/YYYY - 14:00h`.
+- Data de entrega para avaliação final do projeto: `DD/MM/YYYY - 14:00h`.
 
 ---
 
@@ -76,34 +76,36 @@ Para testar se os requisitos estão passando, você pode executar os testes na s
 ## Antes de começar a desenvolver
 
 1. Clone o repositório
-  * `git clone https://github.com/tryber/sd-08-project-jest.git`.
-  * Entre na pasta do repositório que você acabou de clonar:
-    * `cd sd-08-project-jest`
+
+- `git clone https://github.com/tryber/sd-08-project-jest.git`.
+- Entre na pasta do repositório que você acabou de clonar:
+  - `cd sd-08-project-jest`
 
 2. Crie uma branch a partir da branch `master`
-  * Verifique que você está na branch `master`
-    * Exemplo: `git branch`
-  * Se não estiver, mude para a branch `master`
-    * Exemplo: `git checkout master`
-  * Agora, crie uma branch onde você vai guardar os `commits` do seu projeto
-    * Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
-    * Exemplo: `git checkout -b joaozinho-project-jest`
-  * Agora, crie uma branch onde você vai guardar os commits do seu projeto
 
---- 
+- Verifique que você está na branch `master`
+  - Exemplo: `git branch`
+- Se não estiver, mude para a branch `master`
+  - Exemplo: `git checkout master`
+- Agora, crie uma branch onde você vai guardar os `commits` do seu projeto
+  - Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
+  - Exemplo: `git checkout -b joaozinho-project-jest`
+- Agora, crie uma branch onde você vai guardar os commits do seu projeto
+
+---
 
 ## Durante o desenvolvimento
 
-* Faça `commits` das alterações que você fizer no código regularmente
+- Faça `commits` das alterações que você fizer no código regularmente
 
-* Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto
+- Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto
 
-* Os comandos que você utilizará com mais frequência são:
+- Os comandos que você utilizará com mais frequência são:
   1. `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_
   2. `git add` _(para adicionar arquivos ao stage do Git)_
   3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_
-  5. `git push -u nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_
-  4. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_
+  4. `git push -u nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_
+  5. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_
 
 ---
 
@@ -111,10 +113,10 @@ Para testar se os requisitos estão passando, você pode executar os testes na s
 
 Para **"entregar"** seu projeto, siga os passos a seguir:
 
-* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas
-  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**
-  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**
-  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-08`
+- Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas
+  - No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**
+  - No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**
+  - No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-08`
 
 ---
 
@@ -136,7 +138,7 @@ Para garantir a qualidade do seu código de forma a tê-lo mais legível, de mai
 codeclimate analyze
 ```
 
-* ⚠ **PULL REQUESTS COM ISSUES NO CODE CLIMATE NÃO SERÃO AVALIADAS, ATENTE-SE PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO!** ⚠
+- ⚠ **PULL REQUESTS COM ISSUES NO CODE CLIMATE NÃO SERÃO AVALIADAS, ATENTE-SE PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO!** ⚠
 
 ---
 
