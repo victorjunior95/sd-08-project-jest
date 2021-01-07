@@ -27,6 +27,13 @@ describe('verifica as funções e os mocks', () => {
     }
     return pow;
   });
+  mockFunctions.factorial.mockImplementation((a) => {
+    let fact = 1;
+    for (let i = 1; i <= a; i += 1) {
+      fact *= i;
+    }
+    return fact;
+  });
 
   test('testa função add', () => {
     expect(mockFunctions.add(1, 2)).toEqual(3);
