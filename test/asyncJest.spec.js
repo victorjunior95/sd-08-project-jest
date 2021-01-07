@@ -15,7 +15,6 @@ describe("o retorno do telefonema", () => {
     expect.assertions(1);
     const call = await answerPhone(true);
     await expect(answerPhone(true)).resolves.toBe('Oi!');
-    // Insira seu teste assíncrono aqui
   });
   test("ocupado", async() => {
     expect.assertions(1);
