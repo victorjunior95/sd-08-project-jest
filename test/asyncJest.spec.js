@@ -14,11 +14,18 @@ describe("o retorno do telefonema", () => {
   test("atende", () => {
     
     // Insira seu teste assíncrono aqui
-
+    expect.assertions(1);
+    return answerPhone(true).then((data) => {
+      expect(data).toBe('Oi!');
+    });
   });
+
   test("ocupado", () => {
   
     // Insira seu teste assíncrono aqui
-    
+    expect.assertions(1);
+    return answerPhone(false).catch((data) => {
+      expect(data).toBe('Infelizmente não podemos atender...');
+    });
   });
 });
