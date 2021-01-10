@@ -1,5 +1,4 @@
 const answerPhone = require("../src/asyncJest");
-console.log(answerPhone(true));
 
 /*
 A função answerPhone recebe um parâmetro boleano.
