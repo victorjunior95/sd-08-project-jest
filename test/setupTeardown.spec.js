@@ -20,8 +20,19 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('quem sobreviveu?', () => {
-  // Adicione seu código aqui
-
+  beforeEach(() => {
+    adventure.randomAttack();
+  });
+  afterEach(() => {
+    const specialistList = adventure.specialists;
+    const specialistListName = specialistList.map((data) => {
+      return data.nome;
+    });
+    if(specialistListName.length === 1) {
+      return console.log(`Nosso campeão foi ${specialistListName}`);
+    }
+    return console.log(`Sobreviveram: ${specialistListName}`);
+  });
   test('depois da primeira aventura', () => {
     expect(adventure.specialists.length).toBe(5);
   });
