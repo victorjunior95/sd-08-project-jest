@@ -58,7 +58,7 @@ const expectRequest = {
     thumbnail: 'https://randomuser.me/api/portraits/thumb/women/7.jpg'
   },
   nat: 'IE'
-}
+};
 
 describe('verifica o usuário', () => {
   const mockFetchURL = jest.spyOn(api, 'fetchURL');
