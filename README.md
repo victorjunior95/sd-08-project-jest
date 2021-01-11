@@ -80,6 +80,9 @@ Lembre-se também de **não modificar** os describes dos tests na pasta `test`. 
 
 - Data de entrega para avaliação final do projeto: `DD/MM/YYYY - 14:00h`.
 
+  - Data de entrega para avaliação final do projeto: `15/01/2021 - 14:00h`.
+
+
 ---
 
 # Instruções para entregar seu projeto:
