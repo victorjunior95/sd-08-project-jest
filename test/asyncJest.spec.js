@@ -13,14 +13,14 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 describe("o retorno do telefonema", () => {
   test("atende", () => {
     expect.assertions(1);
-    return answerPhone(true).then((data) => {
-      expect(data).toBe('Oi!')
+    return answerPhone(true).then((dado) => {
+      expect(dado).toBe('Oi!')
     })
   });
   test("ocupado", () => {
     expect.assertions(1);
-    return answerPhone(false).catch((data) => {
-      expect(data).toBe("Infelizmente não podemos atender...")
+    return answerPhone(false).catch((dado) => {
+      expect(dado).toBe("Infelizmente não podemos atender...")
     })  
   });
 });
