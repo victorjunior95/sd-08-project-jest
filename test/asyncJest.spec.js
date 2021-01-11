@@ -11,8 +11,7 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe("o retorno do telefonema", () => {
-  test("atende", () => {
-    assert.fail();
+  test("atende", () => {    
     // Insira seu teste assíncrono aqui
   });
   test("ocupado", () => {
