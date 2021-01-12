@@ -90,7 +90,7 @@ Para testar se os requisitos estão passando, você pode executar os testes na s
     * Exemplo: `git checkout -b joaozinho-project-jest`
   * Agora, crie uma branch onde você vai guardar os commits do seu projeto
 
---- 
+---
 
 ## Durante o desenvolvimento
 
