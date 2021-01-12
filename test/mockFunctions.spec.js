@@ -16,6 +16,17 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 
 describe('verifica as funções e os mocks', () => {
   // Crie suas mock functions aqui
+
+  Object.assign(mockFunctions, {
+    add: (x, y) => x + y,
+    subtract: (x, y) => x - y,
+    multiply: (x, y) => x * y,
+    divide: (x, y) => x / y,
+    power: (x, y) => Math.pow(x, y),
+    factorial: function factorial (x) {
+      return (x === 0) ? 1 : x * factorial(x - 1);
+    }
+  });
   
   test('testa função add', () => {
     expect(mockFunctions.add(1, 2)).toEqual(3);
