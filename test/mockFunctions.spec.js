@@ -14,17 +14,18 @@ O foco aqui é a utilização de mock functions.
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
-// console.log( mockFunctions.power(2, 5));
-// console.log(mockFunctions.factorial(10));
-
 describe('verifica as funções e os mocks', () => {
   mockFunctions.multiply = jest.fn().mockImplementation((a, b) => a * b);
   mockFunctions.subtract = jest.fn().mockImplementation((a, b) => a - b);
   mockFunctions.divide = jest.fn().mockImplementation((a, b) => a / b);
   mockFunctions.add = jest.fn().mockImplementation((a, b) => a + b);
   mockFunctions.power = jest.fn().mockImplementation((a, b) => a ** b);
-  mockFunctions.power = jest.fn().mockImplementation((a, b) => {
-    
+  mockFunctions.factorial = jest.fn().mockImplementation((a) => {
+  let fact = 1;
+  for (let i = 1; i <= a; i += 1) {
+    fact *= i;
+  }
+  return fact;
   });
   
 
