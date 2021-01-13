@@ -22,8 +22,9 @@ Dica: Utilizem os métodos jest.fn() ou jest.spyOn().
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
-describe('verifica o usuário', async () => {
-  api.fetchURL = await jest.fn().mockResolvedValue({
+describe('verifica o usuário', () => {
+  api.fetchURL = jest.fn().mockResolvedValue({
+    gender: 'male',
     name: {
       first: 'Antônio',
       last: 'Britto', 
@@ -35,8 +36,7 @@ describe('verifica o usuário', async () => {
     login: {
       username: 'tunicao123',
       password: '1234567890',
-    },
-    gender: 'male'
+    }
   });
   test('verifica se o usuário é o tunico', async () => {
     return api.fetchURL().then((user) => {
