@@ -31,8 +31,8 @@ describe('quem sobreviveu?', () => {
   // Documentação do Jest <3.
   afterAll(() => {
     const winner = adventure.specialists;
-    console.log(`O Vencedor foi ${winner[0].nome}.`)
-  })
+    console.log(`O Vencedor foi ${winner[0].nome}.`);
+  });
   test('depois da primeira aventura', () => {
     expect(adventure.specialists.length).toBe(5);
   });
