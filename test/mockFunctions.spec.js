@@ -17,12 +17,12 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 // console.log( mockFunctions.power(2, 5));
 // console.log(mockFunctions.factorial(10));
 // console.log(mockFunctions.add(2, 5));
-// console.log(mockFunctions.divide(10, 5));
 
 describe('verifica as funções e os mocks', () => {
   mockFunctions.multiply = jest.fn().mockImplementation((a, b) => a * b);
   mockFunctions.subtract = jest.fn().mockImplementation((a, b) => a - b);
   mockFunctions.divide = jest.fn().mockImplementation((a, b) => a / b);
+  mockFunctions.add = jest.fn().mockImplementation((a, b) => a + b);
   
   test('testa função add', () => {
     expect(mockFunctions.add(1, 2)).toEqual(3);
