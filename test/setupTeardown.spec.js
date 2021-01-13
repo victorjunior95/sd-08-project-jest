@@ -41,5 +41,6 @@ describe('quem sobreviveu?', () => {
   });
   test('depois da quinta aventura', () => {
     expect(adventure.specialists.length).toBe(1);
+    console.log(adventure.specialists.nome);
   });
 });
