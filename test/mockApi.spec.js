@@ -38,9 +38,6 @@ const user = {
   },
 };
 
-// console.log(user);
-// console.log(user.location.country);
-
 describe('verifica o usuário', () => {
   api.fetchURL = jest.fn().mockResolvedValue(user);
 
