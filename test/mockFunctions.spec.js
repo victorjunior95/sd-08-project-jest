@@ -14,6 +14,13 @@ O foco aqui é a utilização de mock functions.
 ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
+console.log(mockFunctions.multiply(2, 5));
+// console.log( mockFunctions.power(2, 5));
+// console.log(mockFunctions.factorial(10));
+// console.log(mockFunctions.add(2, 5));
+// console.log(mockFunctions.subtract(2, 5));
+// console.log(mockFunctions.divide(10, 5));
+
 describe('verifica as funções e os mocks', () => {
   // Crie suas mock functions aqui
   
