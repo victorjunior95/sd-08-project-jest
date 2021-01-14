@@ -13,11 +13,12 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 describe("o retorno do telefonema", () => {
   test("atende", done => {
     answerPhone = jest.fn();
-    expect(answerPhone(true).resolves.toEqual('Oi'))
+    expect(answerPhone(true).resolves.toBe('Oi'))
     done();
   });
   test("ocupado", done => {
-    expect(answerPhone(false).rejects.toEqual('Infelizmente não podemos atender...'))
+    answerPhone = jest.fn();
+    expect(answerPhone(false).rejects.toBe('Infelizmente não podemos atender...'))
     done();
   });
 });
