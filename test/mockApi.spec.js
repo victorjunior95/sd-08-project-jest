@@ -34,7 +34,7 @@ const favoriteDev = {
   email: 'tunico@bol.com.br',
   login: {
     username: 'tunicao123',
-    password: '123456789',
+    password: '1234567890',
   }
 }
 describe('verifica o usuário', () => {
