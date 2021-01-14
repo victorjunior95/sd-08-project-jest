@@ -11,14 +11,10 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe("o retorno do telefonema", () => {
-  test("atende", done => {
-    answerPhone = jest.fn();
-    expect(answerPhone(true).resolves.toBe('Oi'))
-    done();
+  test("atende", async () => {
+    await expect(answerPhone(true).resolves.toBe('Oi'))
   });
-  test("ocupado", done => {
-    answerPhone = jest.fn();
-    expect(answerPhone(false).rejects.toBe('Infelizmente não podemos atender...'))
-    done();
+  test("ocupado", async () => {
+    await expect(answerPhone(false).rejects.toBe('Infelizmente não podemos atender...'))
   });
 });
