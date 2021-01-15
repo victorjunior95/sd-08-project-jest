@@ -16,7 +16,6 @@ describe("o retorno do telefonema", () => {
     return expect(answerPhone(true)).resolves.toBe('Oi!');
   });
   test("ocupado", () => {
-    assert.fail();
     expect.assertions(1);
     return expect(answerPhone(false)).rejects.toBe('Infelizmente não podemos atender...');
   });
