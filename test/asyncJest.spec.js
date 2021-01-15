@@ -12,9 +12,9 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 
 describe("o retorno do telefonema", () => {
   test("atende", () => {
-    expect(answerPhone(true).toBe('Oi!'))
+    return answerPhone(true).then((value) => expect(value).toBe('Oi!'));
   });
   test("ocupado", () => {
-    expect(answerPhone(false).toBe('Infelizmente não podemos atender...'))
+    return answerPhone(false).catch((value) => expect(value).toBe('Infelizmente não podemos atender...'));
   });
 });
