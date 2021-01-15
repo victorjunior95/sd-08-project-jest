@@ -15,4 +15,4 @@ const fetchURL = () => new Promise(function (resolve, reject) {
   });
 });
 
-module.exports = { fetchURL }; 
+module.exports = { fetchURL };
