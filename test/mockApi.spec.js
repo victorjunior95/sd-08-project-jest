@@ -23,16 +23,26 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('verifica o usuário', () => {
-  test('verifica se o usuário é o tunico', async () => {
-    const mockFetchURL = jest.spyOn(api, 'fetchURL')
-    return api.fetchURL().then((user) => {
-      expect(user.gender).toEqual('male');
-      expect(user.name.first).toEqual('Antônio');
-      expect(user.name.last).toEqual('Britto');
-      expect(user.location.country).toEqual('Brazil');
-      expect(user.email).toEqual('tunico@bol.com.br');
-      expect(user.login.username).toEqual('tunicao123');
-      expect(user.login.password).toEqual('1234567890');
-    });
+  api.fetchURL = jest.fn()
+    .mockResolvedValue(
+      {
+        gender: 'male',
+        name: { first: 'Antônio', last: 'Britto' },
+        location: { country: 'Brazil' },
+        email: 'tunico@bol.com.br',
+        login: { username: 'tunicao123', password: '1234567890' }
+      }
+    )
+});
+
+test('verifica se o usuário é o tunico', async () => {
+  return api.fetchURL().then((user) => {
+    expect(user.gender).toEqual('male');
+    expect(user.name.first).toEqual('Antônio');
+    expect(user.name.last).toEqual('Britto');
+    expect(user.location.country).toEqual('Brazil');
+    expect(user.email).toEqual('tunico@bol.com.br');
+    expect(user.login.username).toEqual('tunicao123');
+    expect(user.login.password).toEqual('1234567890');
   });
 });
