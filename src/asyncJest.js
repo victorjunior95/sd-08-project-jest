@@ -3,3 +3,10 @@ const answerPhone = answer => new Promise(function (resolve, reject) {
   setTimeout(answer ? resolve('Oi!') : reject('Infelizmente não podemos atender...'), 3000);
 });
 module.exports = answerPhone;
+
+// const answerPhone = async answer => {
+//   try { return await setTimeout(answer ? 'Oi!' :  new Error('Infelizmente não podemos atender...'), 3000);
+//   } catch (error) {
+//     throw new Error(error);
+//   }
+// }
