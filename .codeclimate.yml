@@ -32,7 +32,7 @@ checks:
       threshold: # language-specific defaults. an override will affect all languages.
 exclude_patterns:
 - "node_modules/"
-# - "test/"
+- "test/"
 - "src/data.js"
 plugins:
   editorconfig:
