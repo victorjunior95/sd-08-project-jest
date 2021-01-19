@@ -26,10 +26,10 @@ describe('quem sobreviveu?', () => {
 
   afterEach(() => {
     if(adventure.specialists.length > 1) {
-      console.log(adventure.specialists)
+      console.log(adventure.specialists);
     } else {
       console.log(`${adventure.specialists[0].nome} é o sobrevivente!`)
-    }
+    };
   })
   
 
