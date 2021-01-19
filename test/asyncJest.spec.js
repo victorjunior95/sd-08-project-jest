@@ -11,18 +11,18 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('o retorno do telefonema', () => {
-  test('atende', () => {
-    setTimeout(() => {
-      expect.assertions(1);
-      return answerPhone().then((data) => {
-        expect(data).toEqual('Oi!');
-      });
-    }, 3000);
-  });
-  test('ocupado', () => {
+  test('atende', async () => {
+    const answer = await answerPhone(true);
     expect.assertions(1);
-    return answerPhone().catch((data) => {
-      expect(data).toBe('Infelizmente não podemos atender...');
-    });
+    expect(answer).toEqual('Oi!');
+  });
+
+  test('ocupado', async () => {
+    expect.assertions(1);
+    try {
+      await answerPhone(false);
+    } catch (error) {
+      expect(error).toBe('Infelizmente não podemos atender...');
+    }
   });
 });
