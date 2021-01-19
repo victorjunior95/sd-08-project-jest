@@ -21,3 +21,4 @@ const randomAttack = () => {
 };
 
 module.exports = { specialists, randomAttack };
+console.log(specialists)
