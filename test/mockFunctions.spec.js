@@ -17,23 +17,13 @@ jest.mock('../src/mockFunctions');
 
 describe('verifica as funções e os mocks', () => {
   // Crie suas mock functions aq
-  add.mockImplementation((a,b) => a + b);
-  subtract.mockImplementation((a,b) => a - b);
-  multiply.mockImplementation((a,b) => a * b);
+  add.mockImplementation((a, b) => a + b);
+  subtract.mockImplementation((a, b) => a - b);
+  multiply.mockImplementation((a, b) => a * b);
   divide.mockImplementation((a, b) => a / b);
-  power.mockImplementation((a ,b) => a ** b);
-  factorial.mockImplementation((a) => {
-    let result = 1;
-    for (let index = 1; index <= a; index += 1 ) {
-      result *=  index;
-    }
-    return result;
-  }
-  );
+  power.mockImplementation((a, b) => a ** b);
+   factorial.mockImplementation(a => (a <= 1 && a >= 0)? 1 : a * factorial(a - 1));
 
-
-
-  
   test('testa função add', () => {
     expect(add(1, 2)).toEqual(3);
     expect(add(8, 37)).toEqual(45);
