@@ -1,4 +1,9 @@
 const mockFunctions = require('../src/mockFunctions');
+jest.mock('../src/mockFunctions');
+
+// jest.mock('.../')
+// função para simular automaticamente o módulo mockFunctions - fazendo assim não precisa fazer
+// jest.fn() a todo modulo. O codigo Fica mais limpo.
 
 /*
 Criamos uma série de funções com eficiência duvidosa.
@@ -15,8 +20,22 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('verifica as funções e os mocks', () => {
-  // Crie suas mock functions aqui
+  mockFunctions.add.mockImplementation((a, b) => a + b);
+  mockFunctions.subtract.mockImplementation((a, b) => a - b);
+  mockFunctions.multiply.mockImplementation((a, b) => a * b);
+  mockFunctions.divide.mockImplementation((a, b) => a / b);
+  mockFunctions.power.mockImplementation((a, b) => Math.pow(a, b));
+  mockFunctions.factorial.mockImplementation( a => {
+    let cache = 1;
+    for (let i = a; i >= 1; i--) {
+      cache = cache * i;
+    }
+    return cache;
+  });
+
+// math.pow, eleva a base(a) a potencia (b) e factorial - stackoverflow.
   
+
   test('testa função add', () => {
     expect(mockFunctions.add(1, 2)).toEqual(3);
     expect(mockFunctions.add(8, 37)).toEqual(45);

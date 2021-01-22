@@ -20,7 +20,9 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('quem sobreviveu?', () => {
-  // Adicione seu código aqui
+beforeEach(() => {
+  return adventure.randomAttack();
+});
 
   test('depois da primeira aventura', () => {
     expect(adventure.specialists.length).toBe(5);
@@ -38,3 +40,9 @@ describe('quem sobreviveu?', () => {
     expect(adventure.specialists.length).toBe(1);
   });
 });
+
+// Sabendo que a função randomAttack remove um dos aventureiros, specialists por enemies/ataques
+// utilizo o beforeEach para que ele execute uma função antes de cada um dos testes
+// deste arquivo q sera executado. Onde se a função retornar uma promessa ou for um gerador,
+// Jest espera que a promessa seja resolvida antes de executar o teste.
+// Ultima aula do Gus

@@ -23,7 +23,20 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 */
 
 describe('verifica o usuário', () => {
-  // Crie sua mock da função fetchURL() aqui
+  api.fetchURL = jest.fn().mockResolvedValue({
+    gender: 'male',
+    name: { first: 'Antônio', last: 'Britto' },
+    location: { country: 'Brazil' },
+    email: 'tunico@bol.com.br',
+    login: {
+      username: 'tunicao123',
+      password: '1234567890',
+    },
+  });
+
+// fiz o fetch da api, e utilizando o mockResolvedValue, com base nos dados do Readme
+// selecionei as informações que eram buscadas pelos testes, e mockei o que precisava
+// sabendo o que a api retorna fica mais facil mockar, desacoplar e fazer o teste.
 
   test('verifica se o usuário é o tunico', async () => {
     return api.fetchURL().then((user) => {
