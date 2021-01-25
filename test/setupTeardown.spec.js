@@ -24,8 +24,8 @@ describe('quem sobreviveu?', () => {
   const mockRandomAttack = jest.spyOn(adventure, 'randomAttack');
 
   beforeEach(() => {
-    mockRandomAttack
-  })
+    mockRandomAttack();
+  });
 
   test('depois da primeira aventura', () => {
     expect(adventure.specialists.length).toBe(5);
